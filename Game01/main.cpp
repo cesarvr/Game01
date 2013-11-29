@@ -182,6 +182,7 @@ int main(int argc, const char * argv[])
         
         if (KEY_ACTION) {
             entrada.setFire();
+              bloquear =true;
         }
           }
     

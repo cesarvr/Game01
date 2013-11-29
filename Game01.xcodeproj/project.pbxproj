@@ -785,7 +785,7 @@
 		B5BEF3721843D32D0092D804 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -818,14 +818,14 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lglfw3";
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "/usr/local/include/**";
+				USER_HEADER_SEARCH_PATHS = "/usr/local/include/** ${PROJECT_DIR}/**";
 			};
 			name = Debug;
 		};
 		B5BEF3731843D32D0092D804 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -852,25 +852,29 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "-lglfw3";
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "/usr/local/include/**";
+				USER_HEADER_SEARCH_PATHS = "/usr/local/include/** ${PROJECT_DIR}/**";
 			};
 			name = Release;
 		};
 		B5BEF3751843D32D0092D804 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				OTHER_LDFLAGS = "-lglfw3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/usr/local/include/** ${PROJECT_DIR}/**";
 			};
 			name = Debug;
 		};
 		B5BEF3761843D32D0092D804 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				OTHER_LDFLAGS = "-lglfw3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/usr/local/include/** ${PROJECT_DIR}/**";
 			};
 			name = Release;
 		};

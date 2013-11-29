@@ -19,6 +19,6 @@ void main (void)
     vec4 text_color = texture2D(textura, textura_cord_out);
 
     vec4 color = vec4(s_color,1.0);
-    gl_FragColor = text_color;
+    gl_FragColor = text_color * color;
   
 }

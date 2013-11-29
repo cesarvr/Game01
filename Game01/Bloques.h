@@ -23,7 +23,13 @@ private:
     BlockTest dibujador;
     CBackend *back;
     glm::vec2 _posicion;
+    glm::vec2 _go_posicion;
+    
     CSimpleFisica *_fisica;
+    std::string color_nombre;
+    GLfloat *vertices;
+    GLshort *indices;
+    
     
 public:
     CBloque( );
@@ -32,6 +38,14 @@ public:
     void setFisica( CSimpleFisica *fisica ){_fisica = fisica;};
     
     glm::vec2 getPosicion(){return _posicion;};
+    
+    void    setGoPosicion(  glm::vec2 go_posicion   ){_go_posicion = go_posicion;};
+    glm::vec2 getGoPosicion(){return _go_posicion; };
+    
+    std::string getColor(){return color_nombre; }
+    
+    
+    void mover(float velx);
     
     
     void prepararDibujo();

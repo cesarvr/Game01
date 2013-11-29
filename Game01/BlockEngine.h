@@ -23,9 +23,16 @@ class BlockEngine {
     
     CBackGround _background;
     CsCursor _cursor;
+    bool animar_interpolacion;
     std::vector <CBloque> listado_bloque;
     CEntradaData *_entrada;
     CSimpleIntegrator integrador;
+    std::vector<CBloque >swp_bloq;
+
+    
+    void swapBloques();
+    
+    
     
 public:
     

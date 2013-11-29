@@ -21,6 +21,10 @@ private:
     std::vector <CSimpleFisica *> objetos_colision;
     float _y;
     glm::vec2 _gravedad;
+    short contador;
+    float time;
+    
+    void ResolverColision(CSimpleFisica *objeto_uno, CSimpleFisica *objeto_dos);
     
 public:
     
@@ -28,6 +32,9 @@ public:
     CSimpleIntegrator(float suelo);
     CSimpleFisica * crearFisicaObjeto(float x1, float y1, float x2, float y2);
     void integrar(float delta);
+    
+    
+    
     
     
 };
