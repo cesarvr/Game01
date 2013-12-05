@@ -11,6 +11,7 @@
 		B53D62DC18446E7500005502 /* Bloques.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B53D62DA18446E7500005502 /* Bloques.cpp */; };
 		B53D62DF1844879000005502 /* CCursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B53D62DD1844879000005502 /* CCursor.cpp */; };
 		B53D62E2184490C000005502 /* CEntrada.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B53D62E0184490C000005502 /* CEntrada.cpp */; };
+		B5534150184EDA9E0095D33A /* CLFiguras.c in Sources */ = {isa = PBXBuildFile; fileRef = B553414F184EDA9E0095D33A /* CLFiguras.c */; };
 		B5706FEA1843D439004A0628 /* CoreGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5706FE81843D439004A0628 /* CoreGame.cpp */; };
 		B5706FED1843D468004A0628 /* CCamara.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5706FEB1843D468004A0628 /* CCamara.cpp */; };
 		B57070D61843D628004A0628 /* graphic_engine.c in Sources */ = {isa = PBXBuildFile; fileRef = B57070D41843D628004A0628 /* graphic_engine.c */; };
@@ -27,9 +28,11 @@
 		B57071011843FD4F004A0628 /* config_manager.c in Sources */ = {isa = PBXBuildFile; fileRef = B57071001843FD4F004A0628 /* config_manager.c */; };
 		B5BEF36F1843D32D0092D804 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5BEF36E1843D32D0092D804 /* main.cpp */; };
 		B5BEF3711843D32D0092D804 /* Game01.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5BEF3701843D32D0092D804 /* Game01.1 */; };
-		B5C629B91844EB2200DF5E49 /* CSimpleFisica.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5C629B71844EB2200DF5E49 /* CSimpleFisica.cpp */; };
 		B5C629BC1844ECF400DF5E49 /* CSimpleIntegrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5C629BA1844ECF400DF5E49 /* CSimpleIntegrator.cpp */; };
 		B5CED1D41843FE0C00F666E3 /* utilidades.c in Sources */ = {isa = PBXBuildFile; fileRef = B5CED1D31843FE0C00F666E3 /* utilidades.c */; };
+		B5DB9912184DA9830064135F /* CLVector2DLib.c in Sources */ = {isa = PBXBuildFile; fileRef = B5DB9911184DA9830064135F /* CLVector2DLib.c */; };
+		B5DB9914184DAF0F0064135F /* CLFObjetos.c in Sources */ = {isa = PBXBuildFile; fileRef = B5DB9913184DAF0F0064135F /* CLFObjetos.c */; };
+		B5DB9918184DC9BA0064135F /* CLFColision.c in Sources */ = {isa = PBXBuildFile; fileRef = B5DB9917184DC9BA0064135F /* CLFColision.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +57,9 @@
 		B53D62DE1844879000005502 /* CCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCursor.h; sourceTree = "<group>"; };
 		B53D62E0184490C000005502 /* CEntrada.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CEntrada.cpp; sourceTree = "<group>"; };
 		B53D62E1184490C000005502 /* CEntrada.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEntrada.h; sourceTree = "<group>"; };
+		B553414E184EDA8C0095D33A /* CLFiguras.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLFiguras.h; sourceTree = "<group>"; };
+		B553414F184EDA9E0095D33A /* CLFiguras.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CLFiguras.c; sourceTree = "<group>"; };
+		B55F1E20184ED1CB00CFF2D4 /* CLFDataType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLFDataType.h; sourceTree = "<group>"; };
 		B5706FE81843D439004A0628 /* CoreGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoreGame.cpp; sourceTree = "<group>"; };
 		B5706FE91843D439004A0628 /* CoreGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGame.h; sourceTree = "<group>"; };
 		B5706FEB1843D468004A0628 /* CCamara.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCamara.cpp; sourceTree = "<group>"; };
@@ -306,13 +312,17 @@
 		B5BEF36B1843D32D0092D804 /* Game01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Game01; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BEF36E1843D32D0092D804 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B5BEF3701843D32D0092D804 /* Game01.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Game01.1; sourceTree = "<group>"; };
-		B5C629B71844EB2200DF5E49 /* CSimpleFisica.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CSimpleFisica.cpp; sourceTree = "<group>"; };
-		B5C629B81844EB2200DF5E49 /* CSimpleFisica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSimpleFisica.h; sourceTree = "<group>"; };
 		B5C629BA1844ECF400DF5E49 /* CSimpleIntegrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CSimpleIntegrator.cpp; sourceTree = "<group>"; };
 		B5C629BB1844ECF400DF5E49 /* CSimpleIntegrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSimpleIntegrator.h; sourceTree = "<group>"; };
 		B5CED1D21843FDF900F666E3 /* utilidades.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utilidades.h; sourceTree = "<group>"; };
 		B5CED1D31843FE0C00F666E3 /* utilidades.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utilidades.c; sourceTree = "<group>"; };
 		B5CED1D51844007100F666E3 /* Constantes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constantes.h; sourceTree = "<group>"; };
+		B5DB9910184DA96C0064135F /* CLVector2DLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLVector2DLib.h; sourceTree = "<group>"; };
+		B5DB9911184DA9830064135F /* CLVector2DLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CLVector2DLib.c; sourceTree = "<group>"; };
+		B5DB9913184DAF0F0064135F /* CLFObjetos.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CLFObjetos.c; sourceTree = "<group>"; };
+		B5DB9915184DAF160064135F /* CLFObjetos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLFObjetos.h; sourceTree = "<group>"; };
+		B5DB9916184DC9A90064135F /* CLFColision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLFColision.h; sourceTree = "<group>"; };
+		B5DB9917184DC9BA0064135F /* CLFColision.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CLFColision.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -690,10 +700,9 @@
 		B5C629B61844EB1500DF5E49 /* fisica */ = {
 			isa = PBXGroup;
 			children = (
-				B5C629B71844EB2200DF5E49 /* CSimpleFisica.cpp */,
-				B5C629B81844EB2200DF5E49 /* CSimpleFisica.h */,
-				B5C629BA1844ECF400DF5E49 /* CSimpleIntegrator.cpp */,
+				B5DB9909184DA3350064135F /* fisik_new */,
 				B5C629BB1844ECF400DF5E49 /* CSimpleIntegrator.h */,
+				B5C629BA1844ECF400DF5E49 /* CSimpleIntegrator.cpp */,
 			);
 			name = fisica;
 			sourceTree = "<group>";
@@ -704,6 +713,22 @@
 				B5CED1D51844007100F666E3 /* Constantes.h */,
 			);
 			name = constantes;
+			sourceTree = "<group>";
+		};
+		B5DB9909184DA3350064135F /* fisik_new */ = {
+			isa = PBXGroup;
+			children = (
+				B5DB9910184DA96C0064135F /* CLVector2DLib.h */,
+				B5DB9911184DA9830064135F /* CLVector2DLib.c */,
+				B5DB9915184DAF160064135F /* CLFObjetos.h */,
+				B5DB9913184DAF0F0064135F /* CLFObjetos.c */,
+				B5DB9916184DC9A90064135F /* CLFColision.h */,
+				B5DB9917184DC9BA0064135F /* CLFColision.c */,
+				B553414E184EDA8C0095D33A /* CLFiguras.h */,
+				B553414F184EDA9E0095D33A /* CLFiguras.c */,
+				B55F1E20184ED1CB00CFF2D4 /* CLFDataType.h */,
+			);
+			name = fisik_new;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -757,9 +782,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5C629B91844EB2200DF5E49 /* CSimpleFisica.cpp in Sources */,
+				B5DB9914184DAF0F0064135F /* CLFObjetos.c in Sources */,
+				B5DB9918184DC9BA0064135F /* CLFColision.c in Sources */,
 				B57070FB1843F3DA004A0628 /* lodepng.cpp in Sources */,
 				B57070D91843D641004A0628 /* ShaderManager.cpp in Sources */,
+				B5DB9912184DA9830064135F /* CLVector2DLib.c in Sources */,
 				B53D62D9184462D000005502 /* CsBackEnd.cpp in Sources */,
 				B5C629BC1844ECF400DF5E49 /* CSimpleIntegrator.cpp in Sources */,
 				B57070F41843E936004A0628 /* BlockEngine.cpp in Sources */,
@@ -768,6 +795,7 @@
 				B53D62E2184490C000005502 /* CEntrada.cpp in Sources */,
 				B57071011843FD4F004A0628 /* config_manager.c in Sources */,
 				B53D62DC18446E7500005502 /* Bloques.cpp in Sources */,
+				B5534150184EDA9E0095D33A /* CLFiguras.c in Sources */,
 				B5706FEA1843D439004A0628 /* CoreGame.cpp in Sources */,
 				B57070DC1843D7B1004A0628 /* BlockTest.cpp in Sources */,
 				B5706FED1843D468004A0628 /* CCamara.cpp in Sources */,

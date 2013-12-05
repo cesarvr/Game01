@@ -68,8 +68,8 @@ void CBloque::prepararDibujo(){
 void CBloque::mover(float velx){
 
  
-        _fisica->mover_en_xAxis(velx);
-        _posicion = _fisica->_posicion;
+       // _fisica->mover_en_xAxis(velx);
+        //_posicion = _fisica->_posicion;
  
 }
 
@@ -82,7 +82,9 @@ void CBloque::draw(){
 
 void CBloque::update(){
     
-    glm::vec2 pos = _fisica->getPosicion();
+    
+    
+    glm::vec2 pos = glm::vec2(_fisica->posicion[0], _fisica->posicion[1]);
     this->setPosicion(pos);
     // printf("\n x %f y %f", pos.x, pos.y );
     dibujador.setPosicion(pos);

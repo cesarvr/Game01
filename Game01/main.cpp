@@ -198,6 +198,7 @@ int main(int argc, const char * argv[])
     }
     
     
+    gameMech.finish();
 
     
     glfwDestroyWindow(window);

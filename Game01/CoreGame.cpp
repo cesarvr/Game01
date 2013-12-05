@@ -50,7 +50,11 @@ void CoreGame::update(){
 
 }
 
+void CoreGame::finish(){
 
+
+    blocker.finish();
+}
 
 
 

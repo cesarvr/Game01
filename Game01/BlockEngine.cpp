@@ -36,8 +36,9 @@ BlockEngine::BlockEngine( CBackend *backend ){
      
      
      
-     for (int x = 0; x < 5; x++) {
-     for (int y = 0; y < 5; y++) {
+     for (int x = 0; x < 1; x++) {
+     for (int y = 0; y < 3; y++) {
+     
      
      
      */
@@ -46,9 +47,12 @@ BlockEngine::BlockEngine( CBackend *backend ){
     glm::vec2 BOUND_ONE, BOUND_TWO ;
     bool primero_bound = false;
     
-    for (int x = 0; x < 5; x++) {
-        for (int y = 0; y < 5; y++) {
 
+    for (int x = 0; x < 1; x++) {
+        for (int y = 0; y < 14; y++) {
+            
+            
+            
             
     
         CBloque _bloque = CBloque( backend );
@@ -57,7 +61,7 @@ BlockEngine::BlockEngine( CBackend *backend ){
             
         _bloque.setPosicion(posicion);
             
-        CSimpleFisica *fisico = integrador.crearFisicaObjeto(posicion.x, posicion.y, BLOQUE_ANCHO, BLOQUE_ALTO);
+        CLFObjetos *fisico = integrador.crearFisicaObjeto(posicion.x, posicion.y, BLOQUE_ANCHO, BLOQUE_ALTO);
             
             
             if (!primero_bound) {
@@ -226,3 +230,14 @@ void BlockEngine::update(){
     
     integrador.integrar(_entrada->getTime());
 }
+
+
+
+void BlockEngine::finish(){
+
+  
+    integrador.limpiarMemoria();
+
+
+
+};

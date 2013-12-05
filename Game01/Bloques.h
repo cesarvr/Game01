@@ -25,7 +25,7 @@ private:
     glm::vec2 _posicion;
     glm::vec2 _go_posicion;
     
-    CSimpleFisica *_fisica;
+    CLFObjetos *_fisica;
     std::string color_nombre;
     GLfloat *vertices;
     GLshort *indices;
@@ -35,7 +35,7 @@ public:
     CBloque( );
     CBloque( CBackend *backend );
     void setPosicion(glm::vec2 posicion){_posicion = posicion;};
-    void setFisica( CSimpleFisica *fisica ){_fisica = fisica;};
+    void setFisica( CLFObjetos *fisica ){_fisica = fisica;};
     
     glm::vec2 getPosicion(){return _posicion;};
     

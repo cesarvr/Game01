@@ -36,7 +36,7 @@ public:
     CoreGame( CEntradaData *entrada );
     void draw();
     void update();
-    
+    void finish();
     
     
     

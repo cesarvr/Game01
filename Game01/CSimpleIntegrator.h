@@ -12,27 +12,41 @@
 #include <iostream>
 #include <vector>
 #include "CSimpleFisica.h"
-
-
+#include "CAABBFisica.h"
+#include "glm/glm.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+#include "gtc/random.hpp"
+#include "CLFObjetos.h"
+#include "CLFiguras.h"
+#include "CLFColision.h"
 
 class CSimpleIntegrator {
 
 private:
     std::vector <CSimpleFisica *> objetos_colision;
+    std::vector <CLFObjetos *> objetos_col;
     float _y;
-    glm::vec2 _gravedad;
+    CLVector2 _gravedad;
     short contador;
-    float time;
+    float dt;
+
+    void ResolverColision(CSContactos contacto);
+    void ResolverInterpenetracion(CSContactos contacto);
+    void ApplicarImpulsoInamovible(CSimpleFisica *objeto);
+    void Resolver(std::vector<struct CSContactos> contactos);
     
-    void ResolverColision(CSimpleFisica *objeto_uno, CSimpleFisica *objeto_dos);
+    CAABBFisica _suelo;
+    
     
 public:
     
     CSimpleIntegrator();
     CSimpleIntegrator(float suelo);
-    CSimpleFisica * crearFisicaObjeto(float x1, float y1, float x2, float y2);
+    ~CSimpleIntegrator();
+   // CSimpleFisica * crearFisicaObjeto(float x1, float y1, float x2, float y2);
+    CLFObjetos * crearFisicaObjeto(float x1, float y1, float x2, float y2);
     void integrar(float delta);
-    
+    void limpiarMemoria();
     
     
     
