@@ -15,24 +15,7 @@
 
 
 
-struct CLFObjetos_t{
-    
-    AABB   shape;
-    Circle circle;
-    Linea  linea;
-    CLVector2   posicion;
-    CLVector2   velocidad;
-    CLVector2   aceleracion;
-    float inverse_mass;
-    short indice;
-    float masa;
-    float coeficiente_restitucion;
-    int test;
-    enum CLFSHAPE tipo;
-};
 
-
-typedef struct CLFObjetos_t CLFObjetos;
 
 
 #ifdef __cplusplus

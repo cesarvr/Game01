@@ -11,8 +11,6 @@
 
 #include <iostream>
 #include <vector>
-#include "CSimpleFisica.h"
-#include "CAABBFisica.h"
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "gtc/random.hpp"
@@ -23,19 +21,15 @@
 class CSimpleIntegrator {
 
 private:
-    std::vector <CSimpleFisica *> objetos_colision;
+
     std::vector <CLFObjetos *> objetos_col;
     float _y;
     CLVector2 _gravedad;
     short contador;
     float dt;
 
-    void ResolverColision(CSContactos contacto);
-    void ResolverInterpenetracion(CSContactos contacto);
-    void ApplicarImpulsoInamovible(CSimpleFisica *objeto);
     void Resolver(std::vector<struct CSContactos> contactos);
-    
-    CAABBFisica _suelo;
+
     
     
 public:

@@ -19,55 +19,6 @@
 
 
 
-/*
- 
- AABB
- 
- 
- */
-
-
-struct AABB_t{
-    
-    Punto_t min;
-    Punto_t max;
-    
-};
-
-typedef struct AABB_t AABB;
-
-
-
-/*
- 
- CIRCLE
- 
-*/
-
-struct Circle_t {
-    
-    CLVector2   centro;
-    float       radio;
-    
-};
-
-
-typedef struct Circle_t Circle;
-
-
-/* 
-    LINEA
- 
- */
-
-
-struct Linea_t {
-    CLVector2 min;
-    CLVector2 max;
-    
-};
-
-typedef struct Linea_t Linea;
 
 
 #ifdef __cplusplus

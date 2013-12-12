@@ -26,6 +26,7 @@
 		B57070FB1843F3DA004A0628 /* lodepng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57070F91843F17B004A0628 /* lodepng.cpp */; };
 		B57070FE1843F478004A0628 /* BackGround.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57070FC1843F478004A0628 /* BackGround.cpp */; };
 		B57071011843FD4F004A0628 /* config_manager.c in Sources */ = {isa = PBXBuildFile; fileRef = B57071001843FD4F004A0628 /* config_manager.c */; };
+		B59E649C18505BBE000C4A62 /* CLFColisionList.c in Sources */ = {isa = PBXBuildFile; fileRef = B59E649B18505BBE000C4A62 /* CLFColisionList.c */; };
 		B5BEF36F1843D32D0092D804 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5BEF36E1843D32D0092D804 /* main.cpp */; };
 		B5BEF3711843D32D0092D804 /* Game01.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5BEF3701843D32D0092D804 /* Game01.1 */; };
 		B5C629BC1844ECF400DF5E49 /* CSimpleIntegrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5C629BA1844ECF400DF5E49 /* CSimpleIntegrator.cpp */; };
@@ -309,6 +310,8 @@
 		B57070FD1843F478004A0628 /* BackGround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackGround.h; sourceTree = "<group>"; };
 		B57070FF1843FD3E004A0628 /* config_manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config_manager.h; sourceTree = "<group>"; };
 		B57071001843FD4F004A0628 /* config_manager.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = config_manager.c; sourceTree = "<group>"; };
+		B59E649B18505BBE000C4A62 /* CLFColisionList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CLFColisionList.c; sourceTree = "<group>"; };
+		B59E649D18505BD5000C4A62 /* CLFColisionList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLFColisionList.h; sourceTree = "<group>"; };
 		B5BEF36B1843D32D0092D804 /* Game01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Game01; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BEF36E1843D32D0092D804 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B5BEF3701843D32D0092D804 /* Game01.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Game01.1; sourceTree = "<group>"; };
@@ -724,6 +727,8 @@
 				B5DB9913184DAF0F0064135F /* CLFObjetos.c */,
 				B5DB9916184DC9A90064135F /* CLFColision.h */,
 				B5DB9917184DC9BA0064135F /* CLFColision.c */,
+				B59E649D18505BD5000C4A62 /* CLFColisionList.h */,
+				B59E649B18505BBE000C4A62 /* CLFColisionList.c */,
 				B553414E184EDA8C0095D33A /* CLFiguras.h */,
 				B553414F184EDA9E0095D33A /* CLFiguras.c */,
 				B55F1E20184ED1CB00CFF2D4 /* CLFDataType.h */,
@@ -802,6 +807,7 @@
 				B57070F71843F066004A0628 /* CsTexturas.cpp in Sources */,
 				B5BEF36F1843D32D0092D804 /* main.cpp in Sources */,
 				B53D62DF1844879000005502 /* CCursor.cpp in Sources */,
+				B59E649C18505BBE000C4A62 /* CLFColisionList.c in Sources */,
 				B57070DF1843D7D7004A0628 /* Renderable.cpp in Sources */,
 				B5CED1D41843FE0C00F666E3 /* utilidades.c in Sources */,
 			);

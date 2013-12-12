@@ -12,35 +12,21 @@
 #include <stdio.h>
 #include "CLVector2DLib.h"
 #include "CLFObjetos.h"
+#include "CLFColisionList.h"
+#include "CLFDataType.h"
 
-enum colision_tipo {
-    COLISION_CIRCULO_CIRCULO = 1,
-    COLISION_AABB_CIRCULO = 2,
-    COLISION_LINEA_CIRCULO = 3,
-    NO_COLISION = 0
-};
 
-struct CLFContactoData_t
-{
-    
-    CLFObjetos *colision1;
-    CLFObjetos *colision2;
-    CLVector2  normal;
-    
-    int estado_contacto;
-    float penetracion;
-    
-    
-};
-typedef struct CLFContactoData_t CLFContactoData;
+
 
 #ifdef __cplusplus
 extern "C" {
-    
+    void CLFResolverColisiones();
+    void CLFRecopilarContactos(CLFContactoData *contact_data);
     int CLFColisionResolver(CLFContactoData *contact_data, int tipo_colision);
     int CLFColisionDetector(CLFContactoData *contact_data);
     void CLFColisionApplyLinearImpulse(CLFContactoData *contact_data);
     int CircleToCircleResolver(CLFContactoData *contact_data);
+    void CLFLiberarMemoria();
 }
 #endif
 

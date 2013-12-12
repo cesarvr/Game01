@@ -48,7 +48,7 @@ CLFObjetos  *CSimpleIntegrator::crearFisicaObjeto(float x1, float y1, float x2, 
     objeto->circle = Circle_create(x1, y1, 3.0f);
     
     objeto->tipo = CIRCULO;
-    setCLFObjetosPropiedades(objeto, contador++, 2.0f, 0.5f);
+    setCLFObjetosPropiedades(objeto, contador++, 4.0f, 0.2f);
     setCLFObjetosPosicion(objeto, x1,y1);
     
     objetos_col.push_back(objeto);
@@ -72,50 +72,23 @@ void CSimpleIntegrator::integrar(float delta){
             
             if (obj_fisico->indice != objeto_colision->indice) {
                 
-                
                 CLFContactoData contact_data;
                 contact_data.colision1 = obj_fisico;
                 contact_data.colision2 = objeto_colision;
-
                 
-                int resultado = CLFColisionDetector(&contact_data);
-                if ( resultado == COLISION_AABB_CIRCULO && objeto_colision->indice == 6666) {
-                    
-                    obj_fisico->test = 1;
-          
-          
-                }
-                if ( resultado == COLISION_LINEA_CIRCULO && objeto_colision->indice == 6666) {
-                    
-                    CLFColisionApplyLinearImpulse(&contact_data);
-                    contact_data.colision1->test = true;
-           
-                }
-                if (resultado == COLISION_CIRCULO_CIRCULO) {
-                    
-                    CircleToCircleResolver(&contact_data);
-                    CLFColisionApplyLinearImpulse(&contact_data);
-               
-                    
-                }
-                
-                
-                
-                
-                
-                
+                CLFRecopilarContactos(&contact_data);
             }
             
         }
 
+        
+        CLFResolverColisiones();
 
+        if (!obj_fisico->test) {
             CLFObjetosUpdateVelocidad(obj_fisico, _gravedad, dt);
             CLFObjetosUpdatePosicion(obj_fisico, dt);
-        
-        
-       
-        
-        
+        }
+    
     }
 
 
@@ -131,7 +104,9 @@ void CSimpleIntegrator::limpiarMemoria(){
         objetos = 0;
         
     }
-
+    
+    CLFLiberarMemoria();
+    printf("\n CLFListLiberarMemoria : liberando \n");
 }
 
 

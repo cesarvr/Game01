@@ -1,4 +1,4 @@
-//
+ //
 //  CLFColision.c
 //  Game01
 //
@@ -10,6 +10,8 @@
 #include "CLFColision.h"
 
 
+int CLFColisionDetector(CLFContactoData *contact_data);
+void CLFColisionApplyLinearImpulse(CLFContactoData *contact_data);
 
 float SqDistPointAABB(CLVector2 p, AABB b)
 {
@@ -99,10 +101,10 @@ int TestSphereLinea(Circle a, Linea b, CLFContactoData *contact_data){
     
     float distancia = CLVector2Tamano(vdistancia);
     
-    printf("distancia: %f \n",distancia);
+   // printf("distancia: %f \n",distancia);
 
     if(distancia < a.radio){
-        printf("colision");
+     //   printf("colision");
         CLVector2 vdistancia_norm;
         CLVector2Copy(vdistancia_norm, vdistancia);
         CLVector2Normalizar(vdistancia_norm);
@@ -164,6 +166,68 @@ int CircleToCircleResolver(CLFContactoData *contact_data){
 
 
 
+
+void CLFRecopilarContactos(CLFContactoData *contact_data){
+
+    CLFObjetos *colision1 = contact_data->colision1;
+    CLFObjetos *colision2 = contact_data->colision2;
+    
+    if ( !CLFListBuscarByID( colision1->indice, colision2->indice ) ) {
+        
+        //revisamos si colisionan.
+        int tipo_colision = CLFColisionDetector( contact_data );
+        
+        if ( tipo_colision != NO_COLISION ) {
+          
+            CLFListAdd( contact_data, tipo_colision );
+            
+        }
+        
+    }
+    
+}
+
+
+void CLFResolverColisiones(){
+
+    contactos_lista *lista = CLFListGet();
+
+    
+    while (lista != 0) {
+        
+     
+        if ( lista->tipo_colision == COLISION_LINEA_CIRCULO ) {
+            
+            CLFColisionApplyLinearImpulse(&lista->contacto_data);
+            //lista->contacto_data.colision1->test = 1;
+            //lista->contacto_data.colision2->test = 1;
+            
+        }
+        if (lista->tipo_colision == COLISION_CIRCULO_CIRCULO) {
+            
+            CircleToCircleResolver(&lista->contacto_data);
+            CLFColisionApplyLinearImpulse(&lista->contacto_data);
+            
+            
+        }
+        
+        lista = lista->next;
+
+    }
+    
+    if ( CLFListGet() != 0)  CLFListLiberarMemoria();
+  
+
+}
+
+
+void CLFLiberarMemoria(){
+
+    CLFListLiberarMemoria();
+
+
+}
+
 int CLFColisionDetector(CLFContactoData *contact_data)
 {
 
@@ -176,9 +240,6 @@ int CLFColisionDetector(CLFContactoData *contact_data)
     
         if (TestSphereSphere(colision1->circle, colision2->circle))
              return COLISION_CIRCULO_CIRCULO;
-        
-       
-    
     }
     
     if (colision1->tipo == CIRCULO && colision2->tipo == CUADRADO){
@@ -291,7 +352,6 @@ void CLFColisionApplyLinearImpulse(CLFContactoData *contact_data){
     CLVector2MultiplicarEscalar(impulso, colision1->masa);
     
     CLVector2Add(colision1->velocidad, impulso);
-    printf("colision1->velocidad -> x:%f y:%f \n",colision1->velocidad[0],colision1->velocidad[1] );
     
     /*  Impulso para el segundo objeto de la colision
      
@@ -314,8 +374,6 @@ void CLFColisionApplyLinearImpulse(CLFContactoData *contact_data){
 void CLFColisionPositionalCorrection(CLFContactoData *contact_data){
 
 
-    CLFObjetos *A = contact_data->colision1;
-    CLFObjetos *B = contact_data->colision2;
     
 }
 
